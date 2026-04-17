@@ -23,7 +23,7 @@
     efi.canTouchEfiVariables = true;
   };
 
-  nixpkgs.config.alowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.11";
 }

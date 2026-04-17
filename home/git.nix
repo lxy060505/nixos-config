@@ -5,9 +5,9 @@
       user = {
         name = "Lewis";
 	    email = "me@lewxx.com";
-        init.defaultBranch = "main";
-        core.editor = "nvim";
-      }; 
+	  };
+    init.defaultBranch = "main";
+    core.editor = "nvim";
     };
   };
 }
