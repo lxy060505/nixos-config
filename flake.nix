@@ -23,13 +23,13 @@
       let
         system = "x86_64-linux";
 
-	      mkHost = hostName: nixpkgs.lib.nixosSystem {
+        mkHost = hostName: nixpkgs.lib.nixosSystem {
           inherit system;
-	        specialArgs = {
-	          inherit inputs self hostName;
-	        };
+          specialArgs = {
+            inherit inputs self hostName;
+          };
 
-	        modules = [
+          modules = [
             ./hosts/${hostName}
 
             home-manager.nixosModules.default
@@ -37,20 +37,20 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-		            extraSpecialArgs = {
+  	            extraSpecialArgs = {
                   inherit inputs self hostName;
-		            };
+  	            };
                 users.lewis = ./home/lewis.nix;
               };
             }
-	        ];
-	      };
+          ];
+        };
     
       in
         {
           nixosConfigurations = {
-	          nixos-x = mkHost "nixos-x";
-	          nixos-vm = mkHost "nixos-vm";
+            nixos-x = mkHost "nixos-x";
+            nixos-vm = mkHost "nixos-vm";
           };
         };
 }

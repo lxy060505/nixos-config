@@ -7,5 +7,5 @@
   };
 
   xdg.configFile."nvim/init.lua".source = ./nvim/init.lua;
-  xdg.configFile."nvim/lua/options.lua".source = ./nvim/lua/options.lua
+  xdg.configFile."nvim/lua/options.lua".source = ./nvim/lua/options.lua;
 }
